@@ -17,10 +17,13 @@
     li { margin-bottom: 8px; }
     .contact p, a { color: white; text-decoration: none; }
     .icon { margin-right: 8px; color: #2563eb; }
-    .skill-section ul { list-style: none; padding: 0; }
-    .skill-section li { margin-bottom: 20px; }
-    .progress-container { background: #e5e7eb; border-radius: 10px; height: 16px; width: 100%; margin-top: 5px; }
-    .progress-bar { height: 100%; border-radius: 10px; background: #3b82f6; text-align: right; padding-right: 5px; color: white; font-size: 12px; line-height: 16px; }
+    .skill-category { margin-bottom: 25px; }
+    .skill-category h4 { font-size: 1.2em; margin-bottom: 10px; color: #111827; }
+    .skill-list { list-style: none; padding: 0; }
+    .skill-list li { display: flex; justify-content: space-between; padding: 6px 10px; background: #f1f5f9; margin: 5px 0; border-radius: 6px; align-items: center; }
+    .project-grid { display: flex; gap: 20px; flex-wrap: wrap; }
+    .project-box { flex: 1 1 30%; background: #e0f2fe; padding: 20px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    .project-box h4 { margin-top: 0; color: #0c4a6e; }
   </style>
 </head>
 <body>
@@ -39,76 +42,163 @@
 
     <section class="skill-section">
       <h2 class="section-title">Technical Skills</h2>
-      <ul>
-        <li>AWS <div class="progress-container"><div class="progress-bar" style="width: 95%">Expert</div></div></li>
-        <li>Azure <div class="progress-container"><div class="progress-bar" style="width: 80%">Advanced</div></div></li>
-        <li>GCP <div class="progress-container"><div class="progress-bar" style="width: 70%">Intermediate</div></div></li>
-        <li>Terraform, Ansible, CloudFormation <div class="progress-container"><div class="progress-bar" style="width: 90%">Expert</div></div></li>
-        <li>Jenkins, GitHub Actions, ArgoCD <div class="progress-container"><div class="progress-bar" style="width: 85%">Advanced</div></div></li>
-        <li>Prometheus, Grafana, ELK Stack <div class="progress-container"><div class="progress-bar" style="width: 80%">Advanced</div></div></li>
-        <li>Docker, Kubernetes, Helm <div class="progress-container"><div class="progress-bar" style="width: 90%">Expert</div></div></li>
-        <li>AWS RDS, PostgreSQL, MongoDB <div class="progress-container"><div class="progress-bar" style="width: 75%">Advanced</div></div></li>
-        <li>Python, Bash, Node.js <div class="progress-container"><div class="progress-bar" style="width: 85%">Advanced</div></div></li>
-        <li>Git, GitHub, Bitbucket <div class="progress-container"><div class="progress-bar" style="width: 95%">Expert</div></div></li>
-        <li>Nginx, Load Balancers, IAM <div class="progress-container"><div class="progress-bar" style="width: 80%">Advanced</div></div></li>
-        <li>AI Integration, Computer Vision <div class="progress-container"><div class="progress-bar" style="width: 70%">Intermediate</div></div></li>
-      </ul>
+
+      <div class="skill-category">
+        <h4><i class="fas fa-cloud icon"></i> Cloud Computing</h4>
+        <ul class="skill-list">
+          <li><span>AWS</span><span>Expert</span></li>
+          <li><span>Azure</span><span>Intermediate</span></li>
+          <li><span>GCP</span><span>Beginner</span></li>
+        </ul>
+      </div>
+
+      <div class="skill-category">
+        <h4><i class="fas fa-code icon"></i> Infrastructure as Code</h4>
+        <ul class="skill-list">
+          <li><span>Terraform</span><span>Expert</span></li>
+          <li><span>Ansible</span><span>Advanced</span></li>
+          <li><span>CloudFormation</span><span>Advanced</span></li>
+        </ul>
+      </div>
+
+      <div class="skill-category">
+        <h4><i class="fas fa-tools icon"></i> CI/CD</h4>
+        <ul class="skill-list">
+          <li><span>Jenkins</span><span>Advanced</span></li>
+          <li><span>GitHub Actions</span><span>Advanced</span></li>
+          <li><span>ArgoCD</span><span>Advanced</span></li>
+        </ul>
+      </div>
+
+      <div class="skill-category">
+        <h4><i class="fas fa-chart-line icon"></i> Monitoring & Logging</h4>
+        <ul class="skill-list">
+          <li><span>Prometheus</span><span>Advanced</span></li>
+          <li><span>Grafana</span><span>Advanced</span></li>
+          <li><span>ELK Stack</span><span>Intermediate</span></li>
+        </ul>
+      </div>
+
+      <div class="skill-category">
+        <h4><i class="fab fa-docker icon"></i> Containers & Orchestration</h4>
+        <ul class="skill-list">
+          <li><span>Docker</span><span>Expert</span></li>
+          <li><span>Kubernetes</span><span>Expert</span></li>
+          <li><span>Helm</span><span>Advanced</span></li>
+        </ul>
+      </div>
+
+      <div class="skill-category">
+        <h4><i class="fas fa-database icon"></i> Databases</h4>
+        <ul class="skill-list">
+          <li><span>AWS RDS</span><span>Advanced</span></li>
+          <li><span>PostgreSQL</span><span>Advanced</span></li>
+          <li><span>MongoDB</span><span>Intermediate</span></li>
+        </ul>
+      </div>
+
+      <div class="skill-category">
+        <h4><i class="fas fa-terminal icon"></i> Programming & Scripting</h4>
+        <ul class="skill-list">
+          <li><span>Python</span><span>Advanced</span></li>
+          <li><span>Bash</span><span>Advanced</span></li>
+          <li><span>Node.js</span><span>Intermediate</span></li>
+        </ul>
+      </div>
+
+      <div class="skill-category">
+        <h4><i class="fas fa-code-branch icon"></i> Version Control</h4>
+        <ul class="skill-list">
+          <li><span>Git</span><span>Expert</span></li>
+          <li><span>GitHub</span><span>Expert</span></li>
+          <li><span>Bitbucket</span><span>Advanced</span></li>
+        </ul>
+      </div>
+
+      <div class="skill-category">
+        <h4><i class="fas fa-network-wired icon"></i> Networking & Security</h4>
+        <ul class="skill-list">
+          <li><span>Nginx</span><span>Advanced</span></li>
+          <li><span>Load Balancers</span><span>Advanced</span></li>
+          <li><span>IAM</span><span>Advanced</span></li>
+        </ul>
+      </div>
     </section>
 
     <section>
-      <h2 class="section-title">Professional Experience</h2>
-      <h3>SENIOR SOFTWARE ENGINEER 1 – SOPHOS</h3>
-      <p>Jan 2024 – Present | Ahmedabad, Gujarat, India</p>
-      <ul>
-        <li>Designed and implemented cloud infrastructure using AWS and Terraform.</li>
-        <li>Automated CI/CD pipelines with Jenkins and ArgoCD.</li>
-        <li>Managed Kubernetes clusters for microservices.</li>
-        <li>Implemented monitoring with Prometheus and Grafana.</li>
-        <li>Conducted security assessments and IAM policy implementation.</li>
-        <li>Led cloud migration projects with minimal disruption.</li>
-      </ul>
-
-      <h3>DevOps ENGINEER (Consultant) – Neophyte Ambient Intelligence</h3>
-      <p>Aug 2022 – Jan 2025 | Mumbai, Maharashtra, India</p>
-      <ul>
-        <li>Worked on AI & computer vision deployments using Python, OpenCV, TensorFlow/PyTorch.</li>
-        <li>Integrated observability with Prometheus and Grafana.</li>
-        <li>CI/CD for React.js apps.</li>
-        <li>Deployed Zoho-based security solutions.</li>
-        <li>Led automation and DevOps best practice adoption.</li>
-        <li>Managed database migration and cost optimization.</li>
-      </ul>
+      <h2 class="section-title">Project Highlights</h2>
+      <div class="project-grid">
+        <div class="project-box">
+          <h4>Neodisha AI Vision</h4>
+          <p>Designed an AI-based computer vision system deployed with serverless containers and integrated with AWS cloud and MongoDB.</p>
+        </div>
+        <div class="project-box">
+          <h4>Multi-Env Terraform CI/CD</h4>
+          <p>Implemented GitHub Actions-based CI/CD for multi-environment Terraform deployments, integrated with ArgoCD and EKS.</p>
+        </div>
+        <div class="project-box">
+          <h4>Script Monitoring with CloudWatch</h4>
+          <p>Monitored HTTP response codes and Apache metrics using CloudWatch agent, integrated across AWS EC2 instances.</p>
+        </div>
+      </div>
     </section>
 
     <section>
-      <h2 class="section-title">Leadership Experience</h2>
-      <h3>OPERATION AND CLOUD TEAM LEADER – SOPHOS</h3>
-      <p>Jun 2018 – Dec 2023 | Ahmedabad, Gujarat, India</p>
-      <ul>
-        <li>Led an 8-member team.</li>
-        <li>Managed incidents and root cause analysis.</li>
-        <li>Performed system maintenance and patch management.</li>
-        <li>Automated alerts saving significant man-hours.</li>
-        <li>Mentored junior engineers in SRE practices.</li>
-      </ul>
-    </section>
+  <h2 class="section-title">Professional Experience</h2>
 
-    <section>
-      <h2 class="section-title">Education & Certifications</h2>
-      <ul>
-        <li><i class="fas fa-graduation-cap icon"></i> Bachelor’s Of Science – Delhi University, 2010</li>
-        <li><i class="fas fa-certificate icon"></i> AWS Certified Solutions Architect – Associate</li>
-        <li><i class="fas fa-certificate icon"></i> CCNA</li>
-      </ul>
-    </section>
+  <h3>SENIOR SOFTWARE ENGINEER 1 – SOPHOS</h3>
+  <p>Jan 2024 – Present | Ahmedabad, Gujarat, India</p>
+  <ul>
+    <li>Designed and implemented highly scalable cloud infrastructure using AWS and Terraform.</li>
+    <li>Automated CI/CD pipelines using Jenkins and ArgoCD, reducing deployment time from hours to minutes.</li>
+    <li>Managed Kubernetes clusters for microservices-based applications, optimizing resource utilisation and cost efficiency.</li>
+    <li>Developed monitoring and alerting solutions with Prometheus and Grafana, improving incident response time by 40%.</li>
+    <li>Conducted security assessments and implemented IAM policies to enhance system security.</li>
+    <li>Orchestrated sophisticated cloud migrations that transformed legacy systems into modern AWS infrastructure with minimal disruption.</li>
+    <li>Designed and deployed intelligent monitoring systems that predict and prevent issues before they impact users.</li>
+  </ul>
 
-    <section>
-      <h2 class="section-title">Languages & Interests</h2>
-      <ul>
-        <li><i class="fas fa-language icon"></i> English (Fluent), Hindi (Native), Bengali (Fluent)</li>
-        <li><i class="fas fa-star icon"></i> Cloud computing, Open-source, Blogging, Aquascaping</li>
-      </ul>
-    </section>
+  <h3>DevOps ENGINEER (Consultant) – Neophyte Ambient Intelligence</h3>
+  <p>Aug 2022 – Jan 2025 | Mumbai, Maharashtra, India</p>
+  <ul>
+    <li>Experience in developing and deploying machine learning models for computer vision tasks using Python, OpenCV, TensorFlow/PyTorch.</li>
+    <li>Integration with cloud infrastructure and Kubernetes for scalable inference.</li>
+    <li>Implemented logging and observability solutions with Prometheus and Grafana, improving troubleshooting and debugging.</li>
+    <li>Developed CI/CD pipeline for deploying React.js based web applications.</li>
+    <li>Deployed email and SSO-based security solutions from Zoho to enhance system security and mitigate risks.</li>
+    <li>Developed automated scaling solutions to enhance system resilience and uptime.</li>
+    <li>Led DevOps best practices adoption across development teams, improving deployment stability.</li>
+    <li>Created robust automation frameworks that streamline deployments, optimize performance, and ensure system reliability.</li>
+    <li>Led database migration initiatives while maintaining data integrity and optimizing for cost efficiency.</li>
+  </ul>
+
+  <h3>OPERATION AND CLOUD TEAM LEADER – SOPHOS</h3>
+  <p>Jun 2018 – Dec 2023 | Ahmedabad, Gujarat, India</p>
+  <ul>
+    <li>Led a team of 8 members.</li>
+    <li>Conducted incident management, and root cause analysis, and implemented preventive measures to reduce outages.</li>
+    <li>Performed routine maintenance (e.g., backups, disk cleanup, patch management).</li>
+    <li>Automated 100+ alerts and saved 1000+ hours of man-hours wasted acknowledging, routing, and doing the first level of troubleshooting on each alert.</li>
+    <li>Mentored junior engineers and conducted training sessions on SRE methodologies.</li>
+  </ul>
+</section>
+
+<section>
+  <h2 class="section-title">Education & Certifications</h2>
+  <ul>
+    <li><i class="fas fa-graduation-cap icon"></i> Bachelor’s Of Science – Delhi University, 2010</li>
+    <li><i class="fas fa-certificate icon"></i> AWS Certified Solutions Architect – Associate</li>
+    <li><i class="fas fa-certificate icon"></i> CCNA</li>
+  </ul>
+</section>
+
+<section>
+  <h2 class="section-title">Languages & Interests</h2>
+  <ul>
+    <li><i class="fas fa-language icon"></i> English (Fluent), Hindi (Native), Bengali (Fluent)</li>
+    <li><i class="fas fa-star icon"></i> Cloud computing, Open-source contributions, Tech blogging, Aquascaping</li>
+  </ul>
+</section>
   </main>
 </body>
 </html>
